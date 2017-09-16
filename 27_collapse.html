@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container">
+    <h1>JS插件——collapse</h1>
+    <h3>基本的collapse</h3>
+    <a href="#d1" data-toggle="collapse" class="btn btn-primary">d1</a>
+    <button data-target="#d2" data-toggle="collapse" class="btn btn-primary">d2</button>
+    <div class="collapse" id="d1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, consectetur cupiditate deleniti ea earum, est explicabo illum in molestias non nulla pariatur quidem, recusandae repellat sequi sit ullam unde! Fuga.</div>
+    <div class="collapse" id="d2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, consectetur cupiditate deleniti ea earum, est explicabo illum in molestias non nulla pariatur quidem, recusandae repellat sequi sit ullam unde! Fuga.</div>
+    <h3>配合面板组的手风琴效果</h3>
+    <div class="panel-group" id="pg">
+
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <a class="panel-title" href="#p1" data-toggle="collapse" data-parent="#pg">标题一</a>
+            </div>
+            <div id="p1" class="collapse">
+                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque corporis dolor dolorem ea eius est ipsa, laudantium minima nam nesciunt omnis placeat, praesentium quae sapiente tempora temporibus ut voluptatibus?</div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a class="panel-title" href="#p2" data-toggle="collapse" data-parent="#pg">标题一</a>
+            </div>
+            <div id="p2" class="collapse">
+                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque corporis dolor dolorem ea eius est ipsa, laudantium minima nam nesciunt omnis placeat, praesentium quae sapiente tempora temporibus ut voluptatibus?</div>
+            </div>
+        </div>
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <a class="panel-title" href="#p3" data-toggle="collapse" data-parent="#pg">标题一</a>
+            </div>
+            <div id="p3" class="collapse">
+                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque corporis dolor dolorem ea eius est ipsa, laudantium minima nam nesciunt omnis placeat, praesentium quae sapiente tempora temporibus ut voluptatibus?</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 1170px;
+            padding: 0 15px;
+            margin: 0 auto;
+            position: relative;
+
+        }
+        .container:before,
+        .carousel:before{
+            content: '';
+            display: table;
+        }
+        .container:after,
+        .carousel:after{
+            content: '';
+            display: table;
+            clear: both;
+        }
+        .carousel{
+
+        }
+
+        .carousel-inner {
+            overflow: hidden;
+            /*position: relative;*/
+        }
+
+        .item {
+            /*display: none;*/
+            position: absolute;
+            opacity: 0;
+            /*top: 0;*/
+            /*left: 0;*/
+            /*bottom: 0;*/
+            /*right: 0;*/
+            z-index: 0;
+            transition: all 0.5s linear;
+        }
+
+        .carousel img {
+            /*display: none;*/
+            max-width: 100%;
+        }
+
+        .carousel .active {
+            /*display: block;*/
+            /*z-index: 100;*/
+            opacity: 1;
+        }
+        .control-list{
+            list-style: none;
+            position: absolute;
+            bottom: 10px;
+            z-index: 10;
+        }
+        .control-list li {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="item">
+                <img src="img/5.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="img/6.jpg" alt="">
+            </div>
+            <div class="item active">
+                <img src="img/7.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="img/8.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <ul class="control-list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+//        var Carousel = function(){
+            setInterval(function () {
+                var index = $(".item").index($('.active'));
+                var size =  $(".item").size()
+//                console.log(size);
+                if (index >=  size-1) {
+                    index = 0;
+                    $(".active").removeClass('active');
+                    $(".item").eq(index).addClass('active');
+                }else{
+                    $(".active").removeClass('active').next().addClass('active');
+                }
+
+            }, 3000);
+//        }
+
+
+</script>
+</body>
+</html>

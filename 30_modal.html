@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container">
+    <h1>Bootstrap——模态对话框</h1>
+    <!--推荐写法-->
+    <a data-toggle="modal" href="#modal-login" class="btn btn-info">注册</a>
+</div>
+<div id="modal-login" class="modal fade">
+    <div class="modal-dialog modal-md">  <!--尺寸和位置-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span data-dismiss="modal" class="close">&times;</span>
+                <h3>欢迎注册</h3>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="uname" class="sr-only">用户名：</label>
+                        <input type="text" class="form-control" id="uname" placeholder="用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="upwd" class="sr-only">密码：</label>
+                        <input type="text" class="form-control" id="upwd" placeholder="密码">
+                    </div>
+                    <div class="form-group">
+                        <a href="#" class="btn btn-info">注册</a>
+                        <a href="#" class="btn btn-info">登录</a>
+                    </div>
+                </form>
+            </div>
+            <!--<div class="modal-footer"></div>-->
+        </div>
+
+    </div>
+</div>
+<div id="modal-register" class="modal">
+
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

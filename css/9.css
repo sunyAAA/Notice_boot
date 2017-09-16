@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    font-family: 'sans-serif';
+    font-size: 10px;
+}
+body{
+    font-family: 'Helvetica Neue';
+    font-size: 14px;
+    background: #fff;
+    margin: 0;
+}
+.container:before,
+.container-fluid:before,
+.container-img:before{
+    content: '';
+    display: table;
+}
+.container:after,
+.container-fluid:after,
+.container-img:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.container-logo{
+    padding: 10px 10px;
+    float: left;
+}
+.list-inline{
+    list-style: none;
+    float: right;
+    padding:0 10px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.list-inline li {
+    display: inline-block;
+    color: #fff;
+    padding-left: 10px;
+}
+#header{
+    background: #212120;
+}
+#main{
+    background: #502948;
+    text-align: center;
+}
+#main h1 {
+    margin-top: 75px;
+    margin-bottom: 20px;
+    font-size: 48px;
+    color: #fff;
+}
+#main h3{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #516DA1;
+}
+#main a{
+    display: inline-block;
+    padding: 10px 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid darkblue;
+    background: #3075BB;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+}
+.container-img{
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    width: 90%;
+}
+
+.container-fluid {
+    float: left;
+    padding-left: 10px;
+}
+.container-fluid img {
+    width: 100%;
+    padding: 10px;
+    background: #cccccc;
+}
+@media screen and (min-width: 1200px){
+    .container{
+        width: 1170px;
+        margin: 0 auto;
+    }
+    .container-fluid{
+        width: 25%;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1201px){
+   .container{
+       width: 970px;
+       margin: 0 auto;
+   }
+    .container-fluid{
+        width: 25%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .container{
+        width:750px;
+        margin: 0 auto;
+    }
+    .container-fluid{
+        width: 50%;
+    }
+    .container-logo{
+        width: 70%;
+    }
+    .list-inline{
+        width: 70%;
+    }
+
+}
+
+@media screen and (max-width: 767px){
+    .container{
+        width:100%;
+        margin: 0 auto;
+    }
+    .container-fluid{
+        width: 100%;
+    }
+    .container-logo{
+        width: 100%;
+    }
+    .list-inline{
+        width: 100%;
+    }
+
+}
